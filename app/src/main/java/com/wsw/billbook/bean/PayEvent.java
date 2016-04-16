@@ -5,5 +5,5 @@ package com.wsw.billbook.bean;
  * Created by wsw on 2016/3/27.
  */
 public enum PayEvent {
-    PAY, INCOME
+    OUTCOME, INCOME
 }

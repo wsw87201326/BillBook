@@ -26,4 +26,10 @@
 
     <style name="ToolbarTheme" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
+    <style name="TextTitle">
+        <item name="android:fontFamily">cursive</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/display1</item>
+    </style>
+
 </resources>

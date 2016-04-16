@@ -6,12 +6,11 @@ import java.util.Calendar;
  * 交易详情
  * Created by wsw on 2016/3/27.
  */
-public class Deal {
+public class DealDetail {
     private String name; //什么交易
     private double money; //金额
     private Calendar times; //时间
     private PayEvent payEvent;  //交易事件,是支出还是收入
-
 
     public String getName() {
         return name;

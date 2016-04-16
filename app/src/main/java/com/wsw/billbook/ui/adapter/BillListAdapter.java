@@ -7,9 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.wsw.billbook.R;
-import com.wsw.billbook.bean.ListDeal;
-import com.wsw.billbook.bean.ShowType;
-import com.wsw.billbook.ui.view.DealItem;
+import com.wsw.billbook.bean.DealItem;
+import com.wsw.billbook.bean.ListDealAndTitle;
+import com.wsw.billbook.ui.view.CustomItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +22,7 @@ public class BillListAdapter extends RecyclerView.Adapter<BillListAdapter.BillLi
     private static final int HEAD = 2;
     private static final int BOTTOM = 3;
     private static final int NORMAL = 4;
-    List<ListDeal> listDeals = new ArrayList<>();
+    List<ListDealAndTitle> listDealAndTitles = new ArrayList<>();
     private final Context context;
 
     public BillListAdapter(Context context) {
@@ -36,33 +36,21 @@ public class BillListAdapter extends RecyclerView.Adapter<BillListAdapter.BillLi
 
     @Override
     public void onBindViewHolder(BillListViewHolder holder, int position) {
-        ListDeal listDeal = listDeals.get(position);
+        DealItem dealItem = listDealAndTitles.get(position);
 
-        if (listDeals.size() == 1) { //只有一项时
-            holder.dealItem.setShowType(ShowType.ONLY_ONE);
-        } else if (position == 0) {//为头部
-            holder.dealItem.setShowType(ShowType.HEAD);
-        } else if (position == listDeals.size() - 1){//为尾部时
-            holder.dealItem.setShowType(ShowType.BOTTOM);
-        }else{//普通视图
-            holder.dealItem.setShowType(ShowType.NORMAL);
-        }
-
-        holder.dealItem.setMoney(listDeal.getMoney(),listDeal.getPayEvent());
-        holder.dealItem.setTime(listDeal.getDate());
     }
 
     @Override
     public int getItemCount() {
-        return listDeals == null ? 0 : listDeals.size();
+        return listDealAndTitles == null ? 0 : listDealAndTitles.size();
     }
 
     public class BillListViewHolder extends RecyclerView.ViewHolder {
-        public DealItem dealItem;
+        public CustomItem customItem;
 
         public BillListViewHolder(View itemView) {
             super(itemView);
-            this.dealItem = (DealItem) itemView;
+            this.customItem = (CustomItem) itemView;
         }
     }
 }

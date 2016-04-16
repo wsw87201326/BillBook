@@ -1,32 +1,14 @@
 package com.wsw.billbook.bean;
 
 /**
- * Created by wsw on 2016/3/29.
+ * Create By :wsw
+ * 2016-04-16 11:39
  */
-public class ListDealAndTitle {
-    private ShowType showType;
-    private ItemTitleType itemTitleType;
+public class DealTitle {
     private int year;
     private int mouth;
-    private int day;
     private double inMoney;
     private double outMoney;
-
-    public ShowType getShowType() {
-        return showType;
-    }
-
-    public void setShowType(ShowType showType) {
-        this.showType = showType;
-    }
-
-    public ItemTitleType getItemTitleType() {
-        return itemTitleType;
-    }
-
-    public void setItemTitleType(ItemTitleType itemTitleType) {
-        this.itemTitleType = itemTitleType;
-    }
 
     public int getYear() {
         return year;
@@ -42,14 +24,6 @@ public class ListDealAndTitle {
 
     public void setMouth(int mouth) {
         this.mouth = mouth;
-    }
-
-    public int getDay() {
-        return day;
-    }
-
-    public void setDay(int day) {
-        this.day = day;
     }
 
     public double getInMoney() {

@@ -7,4 +7,7 @@
 
     <string name="action_settings">Settings</string>
     <string name="app_name_logo">BillBook</string>
+    <string name="out_title">支出</string>
+    <string name="in_title">收入</string>
+    <string name="sum_title">总收支</string>
 </resources>

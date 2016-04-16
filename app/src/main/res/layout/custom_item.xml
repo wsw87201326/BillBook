@@ -20,7 +20,10 @@
         android:layout_below="@+id/top_view"
         android:layout_centerHorizontal="true"
         android:background="@drawable/shape_circle"
+        android:fontFamily="cursive"
         android:gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         tools:text="20" />
 
     <View
@@ -33,20 +36,35 @@
         android:visibility="gone"
         tools:visibility="visible" />
 
-    <TextView
-        android:id="@+id/in_money_tv"
+    <LinearLayout
+        android:id="@+id/out_money_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_toEndOf="@id/time_tv"
         android:layout_toRightOf="@id/time_tv"
-        android:gravity="center"
-        android:visibility="gone"
-        tools:text="支出\n2002"
-        tools:visibility="visible" />
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/out_money_tv"
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/out_title" />
+
+        <TextView
+            android:id="@+id/out_money_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/red"
+            android:visibility="gone"
+            android:fontFamily="monospace"
+            tools:text="-2002"
+            tools:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/in_money_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -54,9 +72,24 @@
         android:layout_centerVertical="true"
         android:layout_toLeftOf="@+id/time_tv"
         android:layout_toStartOf="@+id/time_tv"
-        android:gravity="center"
-        android:visibility="gone"
-        tools:text="收入\n3000"
-        tools:visibility="visible" />
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/in_title" />
+
+        <TextView
+            android:id="@+id/in_money_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/green"
+            android:visibility="gone"
+            tools:text="+3000"
+            android:fontFamily="monospace"
+            tools:visibility="visible" />
+    </LinearLayout>
 
 </RelativeLayout>
