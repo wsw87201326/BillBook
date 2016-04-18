@@ -45,10 +45,9 @@ public class CustomTitle extends RelativeLayout {
 
     public void initData(String time, double inMoney, double outMoney) {
         timeTv.setText(time);
-        inMoneyTv.setText(TransformUtil.doubleTrans(inMoney));
-        outMoneyTv.setText(TransformUtil.doubleTrans(outMoney));
+        inMoneyTv.setText(TransformUtil.moneyShowTrans(inMoney));
+        outMoneyTv.setText(TransformUtil.moneyShowTrans(-outMoney));
         setSumTv(inMoney, outMoney);
-
     }
 
     private void setSumTv(double inMoney, double outMoney) {
@@ -58,7 +57,7 @@ public class CustomTitle extends RelativeLayout {
         } else {
             sumMoneyTv.setTextColor(ContextCompat.getColor(context, R.color.red));
         }
-        sumMoneyTv.setText(TransformUtil.doubleTrans(sumMoney));
+        sumMoneyTv.setText(TransformUtil.moneyShowTrans(sumMoney));
     }
 
 }

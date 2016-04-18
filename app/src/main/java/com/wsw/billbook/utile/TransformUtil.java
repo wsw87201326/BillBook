@@ -8,9 +8,17 @@ import java.text.DecimalFormat;
  */
 public class TransformUtil {
 
-    public static String doubleTrans(double num){
+    public static String doubleTrans(double num) {
         DecimalFormat df = new DecimalFormat("#.00");
         return df.format(num);
+    }
+
+    public static String moneyShowTrans(double num) {
+        if (num > 0) {
+            return "+" + doubleTrans(num);
+        } else {
+            return doubleTrans(num);
+        }
     }
 
 }

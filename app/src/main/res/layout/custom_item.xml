@@ -57,7 +57,6 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textColor="@color/red"
-            android:visibility="gone"
             android:fontFamily="monospace"
             tools:text="-2002"
             tools:visibility="visible" />
@@ -86,7 +85,6 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textColor="@color/green"
-            android:visibility="gone"
             tools:text="+3000"
             android:fontFamily="monospace"
             tools:visibility="visible" />

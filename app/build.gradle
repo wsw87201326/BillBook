@@ -57,4 +57,5 @@ dependencies {
     apt "com.google.dagger:dagger-compiler:${dagger}"
 
     provided 'javax.annotation:jsr250-api:1.0'//dagger2可能用到的注解
+    androidTestCompile 'org.testng:testng:6.9.6'
 }

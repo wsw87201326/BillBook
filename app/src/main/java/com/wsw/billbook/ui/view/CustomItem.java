@@ -2,6 +2,7 @@ package com.wsw.billbook.ui.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -9,15 +10,17 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.wsw.billbook.R;
-import com.wsw.billbook.bean.PayEvent;
 import com.wsw.billbook.bean.ShowType;
+import com.wsw.billbook.utile.TransformUtil;
 
 /**
  * 自定义一个显示的item
  * Created by wsw on 2016/3/27.
  */
 public class CustomItem extends RelativeLayout {
+    private static final String TAG = "CustomItem";
     private Context context;
+    public static final double DEFAULT_MONEY = 0;
 
     public View topView;
     public TextView timeTv;
@@ -56,9 +59,9 @@ public class CustomItem extends RelativeLayout {
         outMoneyLayout = (LinearLayout) view.findViewById(R.id.out_money_layout);
     }
 
-    public void initData(ShowType showType, double money, PayEvent payEvent, int time) {
+    public void initData(ShowType showType, double inComeMoney, double outComeMoney, int time) {
         setShowType(showType);
-        setMoney(money, payEvent);
+        setMoney(inComeMoney, outComeMoney);
         setTimeTv(time);
     }
 
@@ -88,23 +91,25 @@ public class CustomItem extends RelativeLayout {
         }
     }
 
-    private void setMoney(double money, PayEvent payEvent) {
-        switch (payEvent) {
-            case OUTCOME://支出
-                inMoneyTv.setVisibility(GONE);
-                outMoneyTv.setVisibility(VISIBLE);
-                outMoneyTv.setText(String.valueOf(money));
-                break;
-            case INCOME://收入
-                outMoneyTv.setVisibility(GONE);
-                inMoneyTv.setVisibility(VISIBLE);
-                inMoneyTv.setText(String.valueOf(money));
-                break;
+    private void setMoney(double inComeMoney, double outComeMoney) {
+        Log.d(TAG,"inComeMoney:"+inComeMoney+"|outComeMoney:"+outComeMoney);
+        if (inComeMoney != DEFAULT_MONEY) {//如果收入不为空,则显示
+            inMoneyLayout.setVisibility(VISIBLE);
+            inMoneyTv.setText(TransformUtil.moneyShowTrans(inComeMoney));
+        } else {
+            inMoneyLayout.setVisibility(GONE);
+        }
+
+        if (outComeMoney != DEFAULT_MONEY) {//如果支出不为空,则显示
+            outMoneyLayout.setVisibility(VISIBLE);
+            outMoneyTv.setText(TransformUtil.moneyShowTrans(-outComeMoney));
+        } else {
+            outMoneyLayout.setVisibility(GONE);
         }
     }
 
     private void setTimeTv(int time) {
-        timeTv.setText(time);
+        timeTv.setText(String.valueOf(time));
     }
 
 }

@@ -12,6 +12,19 @@ public class ListDealAndTitle {
     private double inMoney;
     private double outMoney;
 
+    public ListDealAndTitle() {
+    }
+
+    public ListDealAndTitle(ShowType showType, ItemTitleType itemTitleType, int year, int mouth, int day, double inMoney, double outMoney) {
+        this.showType = showType;
+        this.itemTitleType = itemTitleType;
+        this.year = year;
+        this.mouth = mouth;
+        this.day = day;
+        this.inMoney = inMoney;
+        this.outMoney = outMoney;
+    }
+
     public ShowType getShowType() {
         return showType;
     }
