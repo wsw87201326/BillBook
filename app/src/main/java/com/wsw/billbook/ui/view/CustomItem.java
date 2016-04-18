@@ -80,10 +80,6 @@ public class CustomItem extends RelativeLayout {
                 topView.setVisibility(VISIBLE);
                 bottomView.setVisibility(VISIBLE);
                 break;
-            case ONLY_ONE://只有一条消息时
-                topView.setVisibility(GONE);
-                bottomView.setVisibility(GONE);
-                break;
             case HEAD://头部
                 topView.setVisibility(GONE);
                 bottomView.setVisibility(VISIBLE);

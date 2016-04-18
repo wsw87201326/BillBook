@@ -15,10 +15,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BillListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-    private static final int ONLY_ONE = 1;
-    private static final int HEAD = 2;
-    private static final int BOTTOM = 3;
-    private static final int NORMAL = 4;
     private static final int TITLE_TYPE_SHOW = 0x01;
     private static final int ITEM_TYPE_SHOW = 0x02;
 
@@ -55,6 +51,7 @@ public class BillListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             BillListTitleViewHolder billListTitleViewHolder = (BillListTitleViewHolder) holder;
             billListTitleViewHolder.customTitle.initData(title_time, inMoney, outMoney);
         }
+
 
     }
 

@@ -1,6 +1,6 @@
 package com.wsw.billbook.bean;
 
-import java.util.Calendar;
+import java.util.Date;
 
 /**
  * 列表显示的交易
@@ -8,8 +8,16 @@ import java.util.Calendar;
  */
 public class DealItem {
     private PayEvent payEvent;  //交易事件,是支出还是收入
-    private Calendar date; //时间
+    private Date time; //时间
     private double money; //金额
+
+    public Date getTime() {
+        return time;
+    }
+
+    public void setTime(Date time) {
+        this.time = time;
+    }
 
     public PayEvent getPayEvent() {
         return payEvent;
@@ -17,14 +25,6 @@ public class DealItem {
 
     public void setPayEvent(PayEvent payEvent) {
         this.payEvent = payEvent;
-    }
-
-    public Calendar getDate() {
-        return date;
-    }
-
-    public void setDate(Calendar date) {
-        this.date = date;
     }
 
     public double getMoney() {

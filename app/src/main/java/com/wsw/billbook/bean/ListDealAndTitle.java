@@ -1,11 +1,12 @@
 package com.wsw.billbook.bean;
 
 /**
+ * 数据集合类,主要是为了方便显示
  * Created by wsw on 2016/3/29.
  */
 public class ListDealAndTitle {
-    private ShowType showType;
-    private ItemTitleType itemTitleType;
+    private ShowType showType; //只是对列表项的item起作用,title都为固定显示类型
+    private ItemTitleType itemTitleType; //是title还是item
     private int year;
     private int mouth;
     private int day;

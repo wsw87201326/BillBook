@@ -1,6 +1,6 @@
 package com.wsw.billbook.bean;
 
-import java.util.Calendar;
+import java.util.Date;
 
 /**
  * 交易详情
@@ -9,7 +9,7 @@ import java.util.Calendar;
 public class DealDetail {
     private String name; //什么交易
     private double money; //金额
-    private Calendar times; //时间
+    private Date times; //时间
     private PayEvent payEvent;  //交易事件,是支出还是收入
 
     public String getName() {
@@ -28,11 +28,11 @@ public class DealDetail {
         this.money = money;
     }
 
-    public Calendar getTimes() {
+    public Date getTimes() {
         return times;
     }
 
-    public void setTimes(Calendar times) {
+    public void setTimes(Date times) {
         this.times = times;
     }
 

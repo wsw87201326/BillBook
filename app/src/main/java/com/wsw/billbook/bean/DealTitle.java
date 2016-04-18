@@ -1,29 +1,22 @@
 package com.wsw.billbook.bean;
 
+import java.util.Date;
+
 /**
  * Create By :wsw
  * 2016-04-16 11:39
  */
 public class DealTitle {
-    private int year;
-    private int mouth;
+    private Date date;
     private double inMoney;
     private double outMoney;
 
-    public int getYear() {
-        return year;
+    public Date getDate() {
+        return date;
     }
 
-    public void setYear(int year) {
-        this.year = year;
-    }
-
-    public int getMouth() {
-        return mouth;
-    }
-
-    public void setMouth(int mouth) {
-        this.mouth = mouth;
+    public void setDate(Date date) {
+        this.date = date;
     }
 
     public double getInMoney() {
