@@ -86,7 +86,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="end"
-                android:text="@string/sum_title" />
+                android:text="@string/sum_mouth_title" />
 
             <TextView
                 android:id="@+id/sum_money_tv"
