@@ -10,4 +10,10 @@
     <string name="out_title">支出</string>
     <string name="in_title">收入</string>
     <string name="sum_mouth_title">月总收支</string>
+
+    <string name="mouth_money_in">本月收入</string>
+    <string name="mouth_money_out">本月支出</string>
+    <string name="budget_surplus">预算余额</string>
+    <string name="button_add">添加一笔</string>
+
 </resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/padding">
+
+    <ImageView
+        android:id="@+id/day_img"
+        android:layout_width="@dimen/time_img"
+        android:layout_height="@dimen/time_img"
+        android:layout_marginEnd="@dimen/item_margin"
+        android:layout_marginRight="@dimen/item_margin"
+        tools:src="@drawable/ic_calendar" />
+
+    <ImageView
+        android:id="@+id/right_arrow_img"
+        android:layout_width="@dimen/arrow_dimen"
+        android:layout_height="@dimen/time_img"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/right_arrow" />
+
+    <TextView
+        android:id="@+id/money_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/item_margin"
+        android:layout_toLeftOf="@id/right_arrow_img"
+        android:layout_toStartOf="@id/right_arrow_img"
+        android:textColor="@color/color_money_out"
+        tools:text="5000" />
+
+    <TextView
+        android:id="@+id/money_out_title"
+        style="@style/Text_title_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/day_img"
+        android:layout_toLeftOf="@id/money_out"
+        android:layout_toRightOf="@id/day_img"
+        android:layout_toStartOf="@id/money_out"
+        tools:text="本月支出" />
+
+    <TextView
+        android:id="@+id/money_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/day_img"
+        android:layout_marginRight="@dimen/item_margin"
+        android:layout_toLeftOf="@id/right_arrow_img"
+        android:layout_toStartOf="@id/right_arrow_img"
+        android:textColor="@color/color_money_in"
+        tools:text="6000" />
+
+    <TextView
+        android:id="@+id/time_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/money_in"
+        android:layout_below="@id/money_out_title"
+        android:layout_toLeftOf="@id/money_in"
+        android:layout_toRightOf="@id/day_img"
+        android:gravity="center_vertical"
+        tools:text="04月18日-04月24日" />
+
+</RelativeLayout>
